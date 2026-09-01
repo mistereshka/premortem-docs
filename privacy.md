@@ -1,0 +1,109 @@
+# Privacy Policy
+
+**Premortem — Risk Assessment for Jira**
+
+Last updated: 1 September 2026
+
+This policy describes how the Premortem app ("the App"), published by
+Premortem ("we", "us"), handles data. It is written from the App's actual
+architecture, and every claim in it can be checked against the app manifest
+that Atlassian publishes for the App.
+
+## The short version
+
+**We operate no servers and we receive none of your data.** The App runs
+entirely inside Atlassian's Forge platform. We have no backend, no database,
+and no logs that see your content. The only place your text goes is the AI
+provider *you* choose and authenticate with *your own* key.
+
+## What the App does
+
+The App assesses the technical risk of a Jira issue, and of code changes made
+for it, using an AI language model you select and pay for directly. It can
+also use your organisation's own past incidents as context.
+
+## What data the App reads, and where it goes
+
+| Data | Why | Where it goes |
+|---|---|---|
+| Issue summary and description | The subject of the assessment | Your chosen AI provider only |
+| Code diffs sent by your CI | Same, for code assessment | Your chosen AI provider only |
+| Confluence architecture page, if you link one | Grounds advice in your real components | Your chosen AI provider only |
+| Parent epic; titles of other open issues | Places the work in context | Your chosen AI provider only |
+| Your imported past incidents | Lets risks cite real precedent | Your provider's embeddings endpoint; stored in Forge storage |
+| Your AI provider API key | To call that provider on your behalf | Forge encrypted secret storage; sent only in the `Authorization` header to that provider |
+
+The following are **switched off by default** and read only if an
+administrator enables them under *Context depth*. A source that is off is not
+read at all — no API call is made for it, so the data never leaves Jira:
+
+- Comments on the issue, **including commenter display names**
+- Linked issues and subtasks; labels, components and priority
+- Full contents of changed files
+- Commit history of changed files, **including commit author names**
+- Code stored for related issues
+- A standing instruction written by your administrator
+
+**None of the above ever reaches a server operated by us**, because no such
+server exists.
+
+## Personal data
+
+The App stores personal data in one place, and it is worth stating plainly.
+
+**Atlassian account IDs.** When somebody accepts, dismisses or rates a
+suggested risk, the App records that action together with the account ID of
+the person who took it and a timestamp. This is written to a property on that
+Jira issue — inside your own Atlassian site. It is never sent to the AI
+provider and never sent to us. It exists so that "who dismissed this, and
+when" has an answer.
+
+**Names in text sent to the AI provider.** If your administrator enables the
+comments or commit-history context sources, the display names of commenters
+and commit authors are included in the text sent to your AI provider. Both
+sources are off by default.
+
+## The AI provider is your processor, not ours
+
+When you configure a provider — OpenAI, Anthropic, Google, or a compatible
+endpoint — that provider processes the content sent to it under **your**
+agreement with them. We are not party to it, have no visibility into it, and
+do not control it.
+
+**Review your provider's own terms before enabling the App**, in particular
+whether they retain API traffic or train on it.
+
+## Storage, retention and deletion
+
+- Settings, your API key, imported incidents and feedback records are held in
+  Forge storage, isolated to your installation, for as long as the App is
+  installed.
+- Uninstalling the App triggers Atlassian's standard Forge app-data lifecycle,
+  which removes the App's stored data for your installation.
+- Risks you choose to write into a Jira description or a Confluence page
+  become ordinary Jira and Confluence content, governed by your own site's
+  retention settings rather than by the App.
+
+Every Atlassian site has its own installation and its own storage. One
+customer's data is not reachable from another's.
+
+## What we ask of you
+
+- Keep your own AI provider account secure; the App uses the key you give it.
+- Decide, as the data controller for your site, whether sending your issue
+  text to your chosen provider is appropriate for your organisation.
+- If you enable the comment or commit-history context sources, be aware that
+  you are sending colleagues' names to that provider.
+
+## Children
+
+The App is a workplace tool and is not directed at children.
+
+## Changes
+
+We will update this page when the App's behaviour changes, and the date at
+the top will change with it.
+
+## Contact
+
+Questions about this policy, or about data the App handles: alexeyshipin2@gmail.com

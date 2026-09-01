@@ -1,0 +1,5 @@
+title: Premortem
+description: Risk assessment for Jira issues and code, grounded in your own incidents.
+theme: jekyll-theme-cayman
+# jekyll-relative-links is on by default for GitHub Pages, which is what keeps
+# the .md links between these pages working once they are rendered to .html.
