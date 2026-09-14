@@ -29,9 +29,9 @@ middle, because we do not have a server at all.
   Premortem reviews the actual diff against what the team decided.
 - **[The risk register](risk-register.md)** — how accepted risks reach
   Confluence, and how the register is kept from rotting.
-- **[Citing your own incidents](incidents.md)** — import past incidents so
-  assessments say "this is how PROJ-118 started" instead of speaking in
-  generalities.
+- **[Citing your own incidents](incidents.md)** — import past incidents and
+  postmortems so assessments say "this is how PROJ-118 started" instead of
+  speaking in generalities.
 
 ## Before you decide
 

@@ -43,13 +43,20 @@ the **Premortem** panel and press **Assess risks**.
 It takes a few seconds. You will get risks grouped by kind, each with:
 
 - **What could go wrong**, in one sentence
-- **Likelihood and impact**, and the list is ordered by them — worst first
+- **A priority** — high, medium or low — with the three ratings behind it:
+  severity, how likely it is to occur, and how late you would detect it, each
+  from 1 to 5, plus one line on why
 - **Mitigation** — what to do so it does not happen
 - **If it happens** — what to do when it does anyway
 - **Trigger** — the signal that tells you it is happening now
 
-Each risk has four buttons: **Accept**, **Mitigating**, **Dismiss**, and
-**Ask AI**.
+The list keeps the order the assessment wrote it in, with a count of high,
+medium and low at the top of each group. The ratings are there to read, not
+to sort by: when we measured it, sorting by them pushed the risk that
+actually came true further down the list, not up.
+
+Each risk has five buttons: **Accept**, **Mitigating**, **Dismiss**, **Ask
+AI**, and **This happened**.
 
 ## 4. Decide what to keep
 
@@ -62,9 +69,14 @@ written anywhere until you accept it.
   brings it back if you change your mind
 - **Ask AI** — argue with it. Useful when a risk is nearly right, or when you
   suspect it misunderstood the issue
+- **This happened** — it came true. Later assessments of similar work will
+  cite it
 
-Then press **Commit accepted**. Two checkboxes decide where they go: the
-issue description, the Confluence register, or both.
+If the assessment missed something, write it into the field under the list
+and press **It missed one**. It becomes a precedent for similar work too.
+
+Then press **Write accepted**. Two checkboxes decide where the accepted risks
+go: the issue description, the Confluence register, or both.
 
 ---
 
@@ -80,5 +92,5 @@ knows nothing about your systems yet. Two things fix it, in this order:
 1. **Point it at your architecture page** — one Confluence link, one minute,
    and it is the single biggest quality jump available. See
    [settings](settings.md#system-architecture).
-2. **[Import your past incidents](incidents.md)** — so risks cite what
-   actually happened to you before, by issue key.
+2. **[Import your past incidents and postmortems](incidents.md)** — so risks
+   cite what actually happened to you before, by issue key or by postmortem.

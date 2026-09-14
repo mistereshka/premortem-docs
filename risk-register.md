@@ -46,7 +46,7 @@ mapped space if it does not exist yet.
 | Task | linked back to the Jira issue |
 | Risk | what could go wrong |
 | Category | security, data integrity, operational, and so on |
-| Likelihood × Impact | how the panel ordered it |
+| Likelihood × Impact | the assessment's rating, derived from the risk's occurrence and severity |
 | Mitigation (prevent) | what stops it happening |
 | If it happens | what to do when it happens anyway |
 | Trigger | the signal that says it is happening now |

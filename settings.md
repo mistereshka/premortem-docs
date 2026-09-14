@@ -154,9 +154,29 @@ right.
 
 ---
 
-## Your project's incidents
+## Your project's incidents, and your postmortems
 
-See [citing your own incidents](incidents.md).
+Both are imported here, and both are described in
+[citing your own incidents](incidents.md). Postmortems come from Confluence:
+space keys, a page label, and/or a parent page. Pages restricted from view are
+never imported.
+
+---
+
+## Notice when a risk comes true
+
+Outcome matching. **Off by default**, because it spends your key on a
+schedule.
+
+When it is on, once a week Premortem reads issues of the types you list (for
+example `Bug,Incident`) that were resolved in the last 14 days, and asks your
+model whether each one is an instance of a risk raised earlier. It only
+proposes; a person confirms in the panel, and nothing is recorded until they
+do. **Look now** runs the same check straight away.
+
+- At most 20 candidate pairs per run. Each pair is one model call, and each
+  counts against the monthly limit
+- A confirmed match is recorded as "this happened", with the incident's key
 
 ---
 

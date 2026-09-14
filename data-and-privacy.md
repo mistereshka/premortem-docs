@@ -33,15 +33,25 @@ because we have no visibility into either.
 **Sent only if you switched it on** — every one has its own toggle under
 *Context depth*:
 
-- the parent epic, other active issues, the architecture page, your imported
-  incidents
+- the parent epic, other active issues, the architecture page
+- your own history, when it resembles the issue: imported incidents,
+  postmortems imported from Confluence, risks your team added by hand, and
+  risks that came true
 - **comments, including commenter display names** — off by default
 - linked issues, labels and components
 - full file contents, commit history **including commit author names**, code
   from related issues — all off by default
 
+**Outcome matching** is off by default too. When on, recently resolved bugs
+and incidents are compared with risks raised earlier, once a week, and the
+text of both goes to your provider.
+
 A switched-off source is not read at all. No API call is made for it, so the
 data never leaves Jira in the first place.
+
+**Postmortems from restricted pages are never imported.** Premortem reads
+Confluence with its own rights, so a page is imported only when it and every
+page above it are verified open to view.
 
 **Never sent anywhere:** your API key goes only in the `Authorization` header
 to your own provider. Risk ratings and who made them stay inside your site.
@@ -52,13 +62,14 @@ to your own provider. Risk ratings and who made them stay inside your site.
 |---|---|---|
 | Settings | Forge storage, your installation only | you uninstall |
 | Your API key | Forge **encrypted secret** storage | you uninstall or replace it |
-| Imported incidents and their vectors | Forge storage, your installation only | you uninstall |
+| Imported incidents and postmortems, and their vectors | Forge storage, your installation only | you uninstall |
+| Risks your team added, and what came true — **including the Atlassian account ID of whoever recorded it** | Forge storage, your installation only | you uninstall |
 | Who accepted or dismissed a risk — **including their Atlassian account ID** | a property on that Jira issue, inside your site | the issue does |
 | Risks you committed | your Jira descriptions and Confluence pages | you delete them |
 
-That account ID is why the app answers **yes** to Atlassian's *Stores personal
-data?* question. It never reaches the AI provider and never reaches us; it
-exists so "who dismissed this, and when" has an answer.
+Those account IDs are why the app answers **yes** to Atlassian's *Stores
+personal data?* question. They never reach the AI provider and never reach
+us; they exist so "who dismissed this, and when" has an answer.
 
 ## Cost, since it is the other thing people ask
 

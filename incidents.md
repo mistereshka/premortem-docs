@@ -26,7 +26,7 @@ is a similarity search, and that needs a model that turns text into vectors.
 Import refuses to start without this rather than silently importing something
 unsearchable.
 
-## Importing
+## Importing past incidents
 
 **⚙ → Apps → Premortem settings → Your project's incidents.**
 
@@ -46,6 +46,41 @@ reconciliation ticket even though the keys differ.
 
 There is no benefit to importing everything. Precedents from a codebase
 nobody in the room has touched produce confident, irrelevant risks.
+
+---
+
+## Postmortems from Confluence
+
+A postmortem is the best precedent there is, because it says *why*: not "the
+queue backed up" but "the queue backed up because batch retries shared a
+client id with live traffic, and nobody saw it for a week".
+
+**⚙ → Apps → Premortem settings → Your postmortems.** Give it the space keys,
+the page label your team uses (default `postmortem`), and/or a parent page,
+then press **Import postmortems**.
+
+- **Restricted pages are skipped.** Premortem reads Confluence with its own
+  rights, not the viewer's, so a postmortem from a view-restricted page could
+  otherwise surface on an issue anyone can open. A page is imported only when
+  it and every page above it are verified open; when that cannot be verified,
+  the page is skipped
+- **Re-importing is safe.** Unchanged pages are skipped, edited ones updated
+- Each imported page costs one embedding call on your key
+- When a postmortem is relevant, the risk says so: *your postmortem: …*
+
+## What your team adds as it goes
+
+Two buttons in the panel feed the same store, with no import at all:
+
+- **It missed one** — anyone can add a risk the assessment did not raise.
+  Later assessments of similar work cite it as *raised by your team before*
+- **This happened** — marks a risk that came true. Similar work later cites
+  it as *predicted here before, and it happened*
+
+If [outcome matching](settings.md#notice-when-a-risk-comes-true) is on (it is
+off by default), Premortem also looks at recently resolved bugs and incidents once a
+week and proposes which earlier risk each one was. Nothing is recorded until a
+person confirms the match.
 
 ---
 
