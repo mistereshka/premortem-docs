@@ -16,7 +16,7 @@ configuration.
 | **Model** | Leave empty for the provider's default. Set it to pin a specific model |
 | **Base URL** | Only for the custom provider. Must speak the OpenAI chat-completions shape |
 
-Defaults per provider: `gpt-4.1-mini`, `claude-sonnet-5`,
+Defaults per provider: `gpt-5.5`, `claude-sonnet-5`,
 `gemini-2.5-flash`.
 
 **Test connection** makes one real call and reports what came back. Use it

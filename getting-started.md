@@ -11,14 +11,16 @@ key, and the tokens land on your bill. Pick one:
 
 | Provider | Where the key comes from | Sensible first model |
 |---|---|---|
-| OpenAI | platform.openai.com | `gpt-4.1-mini` |
+| OpenAI | platform.openai.com | `gpt-5.5` |
 | Anthropic | console.anthropic.com | `claude-sonnet-5` |
 | Google Gemini | aistudio.google.com | `gemini-2.5-flash` |
 | Anything OpenAI-compatible | your own endpoint | whatever it serves |
 
-If you have no preference, start with the cheap fast model of whichever
-provider you already have an account with. A task assessment is a few
-thousand tokens; you are not going to be surprised by the bill on a trial.
+If you have no preference, use whichever provider you already have an
+account with. On OpenAI the default is `gpt-5.5`, the model every published
+measurement ran on; `gpt-4.1-mini` is cheaper but has not been measured. An
+assessment is a few thousand tokens; you are not going to be surprised by the
+bill on a trial.
 
 ## 2. Put the key into Premortem
 
