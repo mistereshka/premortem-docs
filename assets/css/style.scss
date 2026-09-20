@@ -1,0 +1,104 @@
+---
+# Brand skin over the Cayman theme. The theme's own variables are declared
+# with !default, so setting them before the import wins without forking it.
+---
+
+// Palette, the same three colours as the app icon and the listing images.
+$ink:   #16202C;
+$ink-2: #27435C;
+$paper: #F5EFE6;
+$amber: #FF8A3D;
+// Amber is an accent, not a text colour: on white it reads at about 2.3:1.
+// Links use a darkened version that clears 4.5:1.
+$amber-ink: #B4530C;
+
+$header-bg-color:           $ink;
+$header-bg-color-secondary: $ink-2;
+$header-heading-color:      $paper;
+$header-bg-color-tertiary:  $ink;
+$section-headings-color:    $ink;
+$body-text-color:           #2C3A47;
+$body-link-color:           $amber-ink;
+$blockquote-text-color:     #5A6773;
+$code-bg-color:             #F4F2EE;
+$code-text-color:           #2C3A47;
+$border-color:              #E4E0D8;
+
+@import "{{ site.theme }}";
+
+// --- the header -----------------------------------------------------------
+// The rings from the app icon, large and faint, off the right edge: the same
+// device as the listing hero, so the two read as one product.
+.page-header {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(120deg, $ink, $ink-2);
+  border-bottom: 5px solid $amber;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -40%;
+    right: -6rem;
+    width: 26rem;
+    height: 26rem;
+    border-radius: 50%;
+    border: 1.1rem solid rgba(245, 239, 230, 0.16);
+    box-shadow:
+      0 0 0 3.4rem rgba(245, 239, 230, 0.06),
+      inset 0 0 0 2.6rem rgba(255, 138, 61, 0.22);
+    pointer-events: none;
+  }
+
+  .project-name,
+  .project-tagline { position: relative; z-index: 1; }
+}
+
+.project-name { letter-spacing: -0.02em; }
+.project-tagline { opacity: 0.85; }
+
+// --- body -----------------------------------------------------------------
+.main-content {
+  h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.01em; }
+
+  h2 {
+    margin-top: 2.2rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid $border-color;
+  }
+
+  a { text-decoration-color: rgba(180, 83, 12, 0.35); }
+  a:hover { color: $ink; text-decoration-color: $amber; }
+
+  blockquote {
+    border-left: 4px solid $amber;
+    background: #FBF8F3;
+    padding: 0.6rem 1rem;
+    color: $blockquote-text-color;
+  }
+
+  table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      background: #F7F5F1;
+      color: $ink;
+      text-align: left;
+    }
+
+    th, td { border: 1px solid $border-color; }
+  }
+
+  code { background: $code-bg-color; }
+  pre { background: $ink; color: $paper; border: 0; }
+  pre > code { background: transparent; color: inherit; }
+
+  hr { background-color: $border-color; }
+}
+
+.site-footer {
+  border-top: 1px solid $border-color;
+  color: #6B7683;
+}
