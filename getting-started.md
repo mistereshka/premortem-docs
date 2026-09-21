@@ -14,7 +14,11 @@ key, and the tokens land on your bill. Pick one:
 | OpenAI | platform.openai.com | `gpt-5.5` |
 | Anthropic | console.anthropic.com | `claude-sonnet-5` |
 | Google Gemini | aistudio.google.com | `gemini-2.5-flash` |
-| Anything OpenAI-compatible | your own endpoint | whatever it serves |
+| An OpenAI-compatible endpoint | yours — but see the note below | whatever it serves |
+
+An OpenAI-compatible endpoint of your own works only on a domain the app has
+declared: Forge lets an app reach nothing it did not list in advance, so a
+new domain means a new app version. Ask us before you rely on one.
 
 If you have no preference, use whichever provider you already have an
 account with. On OpenAI the default is `gpt-5.5`, the model every published

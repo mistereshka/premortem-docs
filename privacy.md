@@ -101,9 +101,11 @@ is the one in their data processing addendum, which you accept directly with
 them. We are not a party to it, and we have no transfer mechanism of our own
 because nothing is transferred to us.
 
-If your organisation must keep this data in the EEA, point the App at an
-EEA-hosted endpoint: the custom provider option takes any OpenAI-compatible
-base URL, including one you run yourself.
+If your organisation must keep this data in the EEA, ask us: the App can
+reach an EEA-hosted OpenAI-compatible endpoint only once its domain is
+declared in the App's manifest, because Forge blocks every domain an app has
+not declared in advance. Until then, the transfer terms are the ones your
+chosen provider offers.
 
 ## How the App is secured
 

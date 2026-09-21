@@ -11,10 +11,10 @@ configuration.
 
 | Field | What it does |
 |---|---|
-| **Provider** | OpenAI, Anthropic, Google Gemini, or a custom OpenAI-compatible endpoint. Nothing runs until one is chosen |
+| **Provider** | OpenAI, Anthropic, Google Gemini, or a custom OpenAI-compatible endpoint (see Base URL). Nothing runs until one is chosen |
 | **API key** | Yours. Stored encrypted, never displayed back — you see the last four characters only |
 | **Model** | Leave empty for the provider's default. Set it to pin a specific model |
-| **Base URL** | Only for the custom provider. Must speak the OpenAI chat-completions shape |
+| **Base URL** | Only for the custom provider. Must speak the OpenAI chat-completions shape, **and must be on a domain the app declares**: Forge blocks calls to any domain not listed in the app's manifest, whatever the key. Today those are `api.openai.com`, `api.anthropic.com` and `generativelanguage.googleapis.com`. Ask us to add yours — it takes a new app version. **Test connection** tells you at once whether a URL is reachable |
 
 Defaults per provider: `gpt-5.5`, `claude-sonnet-5`,
 `gemini-2.5-flash`.

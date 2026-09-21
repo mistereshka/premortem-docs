@@ -10,8 +10,7 @@ ones worth keeping; those go into the issue description and your Confluence
 risk register. The rest you dismiss and never see again.
 
 **It runs on your own AI key.** Your text goes from your Atlassian site
-straight to the provider you chose — OpenAI, Anthropic, Google, or any
-OpenAI-compatible endpoint you point it at. We do not have a server in the
+straight to the provider you chose — OpenAI, Anthropic or Google. We do not have a server in the
 middle, because we do not have a server at all.
 
 ---
