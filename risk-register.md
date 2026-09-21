@@ -10,11 +10,11 @@ somewhere durable.
 
 ## The flow
 
-**Propose → decide → commit.** Nothing is written until the third step.
+**Propose → decide → write.** Nothing is written until the third step.
 
 1. The assessment **proposes** risks in the panel. They exist only there
 2. A person marks each **accepted**, **mitigating**, or **dismissed**
-3. **Commit accepted** writes them out
+3. **Write accepted** writes them out
 
 Two checkboxes control where:
 
@@ -46,7 +46,7 @@ mapped space if it does not exist yet.
 | Task | linked back to the Jira issue |
 | Risk | what could go wrong |
 | Category | security, data integrity, operational, and so on |
-| Likelihood × Impact | the assessment's rating, derived from the risk's occurrence and severity |
+| Priority | the action priority and the three ratings behind it, e.g. `high · S5 · O3 · D4` |
 | Mitigation (prevent) | what stops it happening |
 | If it happens | what to do when it happens anyway |
 | Trigger | the signal that says it is happening now |
@@ -55,9 +55,20 @@ mapped space if it does not exist yet.
 The last three columns are the ones that make a register usable in an
 incident rather than only in a planning meeting.
 
-## Re-committing is safe
+The page is set to full width, and each column gets a width of its own —
+eight equal columns of prose wrap to one word per line. Registers created by
+older versions are upgraded in place the next time an issue writes to them.
 
-Rows for an issue are **replaced**, not appended. Commit the same issue five
+## Newest first
+
+New rows go directly under the header, not at the bottom. A register that
+grows downwards buries the issue somebody just worked on under every issue
+that came before it, and the page is read far more often than it is written.
+Writing an issue again lifts its rows back to the top.
+
+## Writing again is safe
+
+Rows for an issue are **replaced**, not appended. Write the same issue five
 times and the register holds one current set, not five copies. The same is
 true of the description section — it is rewritten in place, not stacked.
 
@@ -71,6 +82,6 @@ A register nobody trims stops being read, and then stops being written.
 titled `Risk register *` across the site, removes rows whose Jira issue no
 longer exists, and saves a page only when something actually changed.
 
-It also runs on a schedule, so in practice you rarely need the button. It is
+It also runs once a week on its own, so in practice you rarely need the button. It is
 there for when you have just deleted a batch of issues and want the register
 correct now rather than tomorrow.

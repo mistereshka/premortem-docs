@@ -129,12 +129,16 @@ Always included: the diff itself.
 | Pull request title and description | on | |
 | Architecture page from Confluence | on | This is what lets it catch code contradicting a written decision |
 | Your past incidents | on | |
+| Callers of the changed code, and how new imports are used elsewhere | on | What a change breaks is usually at its call sites, not in the diff |
 | Full content of the changed files | **off** | Expensive. Turn on when diffs alone leave too little context |
 | Commit history of the changed files, and matching tests | **off** | |
 | Code already pushed for related issues | **off** | Expensive |
 
-The last two need an up-to-date CI workflow. If yours predates them, copy the
-current one from the CI section of the settings page.
+Three of these are sent by CI rather than read from Jira — full file content,
+commit history, and callers of the changed code. They only arrive if your
+workflow is current; if yours predates them, copy the current one from the CI
+section of the settings page. The panel says, per issue, how many files it
+actually received content for.
 
 ### Standing instructions
 
@@ -188,9 +192,10 @@ See [code risk analysis](code-risks.md).
 
 ## Register maintenance
 
-Removes rows from the Confluence register whose Jira issue no longer exists
-or is no longer relevant. Run it occasionally; a register nobody trims stops
-being read. See [the risk register](risk-register.md#keeping-it-from-rotting).
+Removes rows from the Confluence register whose Jira issue no longer exists.
+It runs once a week on its own; the button is for when you want the register
+correct now — after deleting a batch of issues, say. A register nobody trims
+stops being read. See [the risk register](risk-register.md#keeping-it-from-rotting).
 
 ---
 

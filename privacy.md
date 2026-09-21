@@ -2,7 +2,7 @@
 
 **Premortem — Risk Assessment for Jira**
 
-Last updated: 14 September 2026
+Last updated: 21 September 2026
 
 This policy describes how the Premortem app ("the App"), published by
 Premortem ("we", "us"), handles data. It is written from the App's actual
@@ -30,6 +30,7 @@ later came true.
 |---|---|---|
 | Issue summary and description | The subject of the assessment | Your chosen AI provider only |
 | Code diffs sent by your CI | Same, for code assessment | Your chosen AI provider only |
+| With a diff: the changed-file names, the pull request's title and description, and the call sites of the changed code | Shows what a change can break outside the diff | Your chosen AI provider only. Collected by your CI workflow; each can be switched off |
 | Confluence architecture page, if you link one | Grounds advice in your real components | Your chosen AI provider only |
 | Parent epic; titles of other open issues | Places the work in context | Your chosen AI provider only |
 | Your imported past incidents | Lets risks cite real precedent | Your provider's embeddings endpoint; stored in Forge storage; the most similar ones are sent to your chosen AI provider with an assessment |

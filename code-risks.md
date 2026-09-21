@@ -14,11 +14,17 @@ This is the part no risk register can do.
 2. A GitHub Action sends the diff and PR context to your Premortem
    installation, which **stores it against that issue**
 3. Nothing runs yet. No AI call, no cost
-4. A person opens the Jira issue and clicks **Assess code risks**
+4. A person opens the Jira issue and clicks **Assess code risks**. The button
+   sits next to **Assess risks** in the panel and stays greyed out until a
+   diff has arrived, so you can always see that the code half exists
 5. The assessment runs on your key and appears in the **Code risks** tab
 
 Step 3 is deliberate. CI fires on every push; assessments cost money. So CI
 only ever parks the diff, and a human decides when it is worth assessing.
+
+After the first code assessment the button reads **Reassess code risks**, and
+when CI has parked a newer diff the panel says so: *⚠ New commits since the
+last code assessment.*
 
 ---
 
@@ -63,8 +69,9 @@ Copy the workflow from the same settings screen into
 
 ### 4. Name branches after issues
 
-The issue key is taken from the branch name (`BT-12-fix-webhook`) or the PR
-title (`[BT-12] ...`). No key, no assessment — the Action simply does nothing.
+The issue key is taken from the branch name (`BT-12-fix-webhook`), the PR
+title (`[BT-12] ...`) or the PR description — the first key-shaped word found
+in that order wins. No key, no assessment — the Action simply does nothing.
 
 ---
 
@@ -101,9 +108,10 @@ regenerate it afterwards.
 
 | Symptom | Cause |
 |---|---|
-| Nothing appears in the panel | No issue key in the branch name or PR title |
+| Nothing appears in the panel | No issue key in the branch name, PR title or PR description |
 | Pipeline logs a 401 | Wrong or missing `PREMORTEM_CI_SECRET` |
 | "No CI signing secret" in the response | The site has never fetched the webhook URL — do step 1 |
 | Diff arrives but nothing is assessed | Working as designed. Click **Assess code risks** on the issue |
+| **Assess code risks** is greyed out | No diff has been parked for this issue yet — CI has not run, or found no key |
 
 More in [troubleshooting](troubleshooting.md).

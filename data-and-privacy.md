@@ -34,6 +34,9 @@ because we have no visibility into either.
 *Context depth*:
 
 - the parent epic, other active issues, the architecture page
+- for a code assessment: the changed-file names, the pull request's title and
+  description, and the call sites of the changed code — these three are on by
+  default, and your CI is what collects them
 - your own history, when it resembles the issue: imported incidents,
   postmortems imported from Confluence, risks your team added by hand, and
   risks that came true
@@ -65,7 +68,7 @@ to your own provider. Risk ratings and who made them stay inside your site.
 | Imported incidents and postmortems, and their vectors | Forge storage, your installation only | you uninstall |
 | Risks your team added, and what came true — **including the Atlassian account ID of whoever recorded it** | Forge storage, your installation only | you uninstall |
 | Who accepted or dismissed a risk — **including their Atlassian account ID** | a property on that Jira issue, inside your site | the issue does |
-| Risks you committed | your Jira descriptions and Confluence pages | you delete them |
+| Risks you wrote out with **Write accepted** | your Jira descriptions and Confluence pages | you delete them |
 
 Those account IDs are why the app answers **yes** to Atlassian's *Stores
 personal data?* question. They never reach the AI provider and never reach

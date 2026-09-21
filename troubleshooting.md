@@ -49,11 +49,17 @@ Work through it in this order:
 
 | Check | |
 |---|---|
-| Does the branch or PR title contain the issue key? | No key, no assessment. `BT-12-fix-webhook` or `[BT-12] ...` |
+| Does the branch, PR title or PR description contain the issue key? | No key, no assessment. `BT-12-fix-webhook` or `[BT-12] ...` |
 | Did the Action run at all? | Look at the workflow run in GitHub |
 | Did it log a 401? | `PREMORTEM_CI_SECRET` is wrong or missing |
 | Did it say "no CI signing secret"? | The site never fetched the webhook URL. ⚙ → Apps → Premortem settings → CI integration |
 | Did it succeed and still nothing? | Correct. CI only stores the diff — open the issue and click **Assess code risks** |
+
+## The panel shows nothing on an issue nobody has assessed
+
+That is the resting state. Before the first assessment there is nothing to
+show, so the panel offers **Assess risks** and stays quiet — an empty list of
+risks would read as "assessed, and clean".
 
 ## The pipeline broke right after rotating a secret
 
@@ -74,7 +80,7 @@ Re-import the project.
 ⚙ → Apps → Premortem settings → **Register maintenance**. It also runs on a
 schedule; the button is for when you want it correct now.
 
-## Committing the same issue twice duplicated the risks
+## Writing the same issue twice duplicated the risks
 
 It should not — rows and the description section are replaced, not appended.
 If you are seeing genuine duplicates, that is a bug worth reporting with the
