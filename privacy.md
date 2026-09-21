@@ -86,6 +86,32 @@ do not control it.
 **Review your provider's own terms before enabling the App**, in particular
 whether they retain API traffic or train on it.
 
+## How the App is secured
+
+- **There is no infrastructure of ours to breach.** The App is Forge code and
+  Forge storage inside Atlassian's platform. We run no servers, no database
+  and no logs, and we hold no standing access to any customer's site.
+- **Encryption.** Your AI provider key and your CI signing secret are held in
+  Forge's encrypted secret storage, never in plain settings, and neither is
+  ever displayed back — the key shows its last four characters only. Every
+  call the App makes, to Atlassian and to your providers, is over TLS.
+- **Isolation.** Every Atlassian site has its own Forge installation and its
+  own storage. One customer's settings, keys and imported history are not
+  reachable from another's.
+- **Configuration is administrator-only.** Reading or changing settings —
+  including the key, the imported incidents and the CI secrets — requires
+  Jira administrator permissions. Anyone who can see an issue can run an
+  assessment on it; only an administrator configures the site.
+- **The CI endpoint is signed.** The web trigger your pipeline posts diffs to
+  accepts only requests carrying a correct HMAC-SHA256 signature made with a
+  secret created for your site, compared in constant time. Unsigned or
+  wrongly signed requests are rejected and nothing is stored. Both the URL and
+  the secret can be rotated from the settings page at any time.
+- **Confluence is read with the App's own rights, and that is accounted for.**
+  A postmortem page is imported only when it, and every page above it, is
+  verified open to view; a page whose restrictions cannot be checked is
+  skipped rather than imported.
+
 ## Storage, retention and deletion
 
 - Settings, your API key, imported incidents and postmortems, risks your team
