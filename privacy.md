@@ -86,6 +86,25 @@ do not control it.
 **Review your provider's own terms before enabling the App**, in particular
 whether they retain API traffic or train on it.
 
+## International transfers
+
+The App holds no data outside Atlassian's platform, so it makes no transfer of
+its own. What crosses a border is the call your site makes to the AI provider
+**you** configured: your text goes from Atlassian's infrastructure to that
+provider's endpoint, which for OpenAI, Anthropic and Google is normally in the
+United States.
+
+That transfer happens under **your** agreement with that provider. You are the
+controller; the provider is your processor; the transfer mechanism — standard
+contractual clauses, an adequacy decision, or whatever the provider offers —
+is the one in their data processing addendum, which you accept directly with
+them. We are not a party to it, and we have no transfer mechanism of our own
+because nothing is transferred to us.
+
+If your organisation must keep this data in the EEA, point the App at an
+EEA-hosted endpoint: the custom provider option takes any OpenAI-compatible
+base URL, including one you run yourself.
+
 ## How the App is secured
 
 - **There is no infrastructure of ours to breach.** The App is Forge code and
