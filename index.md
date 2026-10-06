@@ -37,6 +37,7 @@ middle, because we do not have a server at all.
 - **[Where your data goes](data-and-privacy.md)** — read this one before
   installing, not after.
 - **[Troubleshooting](troubleshooting.md)** — the failures people actually hit.
+- **[Support](support.md)** — how to reach us, and how quickly we answer.
 
 ---
 
