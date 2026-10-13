@@ -65,4 +65,4 @@ this licence if the App is used in breach of these terms.
 
 ## Contact
 
-alexeyshipin2@gmail.com
+support@usepremortem.com

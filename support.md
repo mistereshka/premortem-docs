@@ -7,7 +7,7 @@ what that means for you, so nobody has to guess.
 
 ## How to reach us
 
-**Email:** alexeyshipin2@gmail.com — for anything: a bug, a question, a risk
+**Email:** support@usepremortem.com — for anything: a bug, a question, a risk
 assessment that came back useless, a feature you need.
 
 **Security issues:** the same address. Please say "security" in the subject

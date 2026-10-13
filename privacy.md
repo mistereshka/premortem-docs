@@ -172,4 +172,4 @@ the top will change with it.
 
 ## Contact
 
-Questions about this policy, or about data the App handles: alexeyshipin2@gmail.com
+Questions about this policy, or about data the App handles: support@usepremortem.com
