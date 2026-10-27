@@ -36,6 +36,8 @@ middle, because we do not have a server at all.
 
 - **[Where your data goes](data-and-privacy.md)** — read this one before
   installing, not after.
+- **[Security](security.md)** — how the app is built and protected, and where
+  to report a vulnerability.
 - **[Troubleshooting](troubleshooting.md)** — the failures people actually hit.
 - **[Support](support.md)** — how to reach us, and how quickly we answer.
 
@@ -50,5 +52,6 @@ middle, because we do not have a server at all.
 | **A Git repository** | Optional. Only for code risk analysis |
 | **Jira admin rights** | To configure it. Anyone who can see an issue can then use it |
 
-There is no account to create with us, and nothing to pay us for at this
-stage.
+There is no account to create with us. Premortem is licensed through the
+Atlassian Marketplace, so billing, if any applies to your team's size, runs
+through your existing Atlassian account and nothing is paid to us directly.
