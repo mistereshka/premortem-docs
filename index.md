@@ -28,6 +28,10 @@ middle, because we do not have a server at all.
   Premortem reviews the actual diff against what the team decided.
 - **[The risk register](risk-register.md)** — how accepted risks reach
   Confluence, and how the register is kept from rotting.
+- **[How to run a pre-mortem on a Jira issue](premortem-on-a-jira-issue.md)**
+  — the technique itself, by hand in fifteen minutes, and where the app fits.
+- **[Keeping a risk register in Confluence](risk-register-in-confluence.md)**
+  — what a register row needs, why most of them rot, and how to generate one.
 - **[Citing your own incidents](incidents.md)** — import past incidents and
   postmortems so assessments say "this is how PROJ-118 started" instead of
   speaking in generalities.
@@ -39,6 +43,8 @@ middle, because we do not have a server at all.
 - **[Security](security.md)** — how the app is built and protected, and where
   to report a vulnerability.
 - **[Troubleshooting](troubleshooting.md)** — the failures people actually hit.
+- **[Moving from version 3.x](upgrading-from-3x.md)** — only if you installed
+  before 29 October 2026.
 - **[Support](support.md)** — how to reach us, and how quickly we answer.
 
 ---

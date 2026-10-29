@@ -22,6 +22,17 @@ shown by **Check usage this month**. Otherwise the allowance resets on the
 The cap applies to administrators too, so seeing this as an admin is normal —
 raise the number and carry on.
 
+## Connected apps shows "Paid update" and "Outdated 3.10.0"
+
+The only button offered is **Uninstall**, and there is no Update. That site is
+on a version from before the app was licensed, and Atlassian does not permit
+an unlicensed install to be upgraded to a licensed one.
+
+What the move costs, and what survives it, is on
+[Moving from version 3.x to 4.0.0](upgrading-from-3x.md). Read that page
+before uninstalling: uninstalling clears the imported incidents and the
+settings.
+
 ## "This action requires Jira administrator permissions"
 
 Settings are admin-only, including reading them. Anyone who can see an issue

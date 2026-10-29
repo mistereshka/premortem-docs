@@ -24,7 +24,8 @@ If you have no preference, use whichever provider you already have an
 account with. On OpenAI the default is `gpt-5.5`, the model every published
 measurement ran on; `gpt-4.1-mini` is cheaper but has not been measured. An
 assessment is a few thousand tokens; you are not going to be surprised by the
-bill on a trial.
+bill on a trial. For scale: the Marketplace reviewer who tested the whole app
+end to end, on our key, spent $0.65 in total.
 
 ## 2. Put the key into Premortem
 
@@ -45,6 +46,13 @@ assessment later.
 
 Open any Jira issue with a real description. In the right-hand column, expand
 the **Premortem** panel and press **Assess risks**.
+
+> **Pick a real ticket for the first run, not a one-line one.** The
+> assessment can only reason about what the issue says: a title with no
+> description produces risks that could apply to any project, and that is the
+> app working correctly on thin input rather than the app being empty. An
+> issue with a description, a parent epic and a few comments is the honest
+> test.
 
 It takes a few seconds. You will get risks grouped by kind, each with:
 
