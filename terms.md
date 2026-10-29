@@ -2,7 +2,7 @@
 
 **Premortem — Risk Assessment for Jira**
 
-Last updated: 1 September 2026
+Last updated: 29 October 2026
 
 These terms cover use of the Premortem app ("the App"), published by
 Premortem. Installing or using the App means accepting them.
@@ -10,8 +10,27 @@ Premortem. Installing or using the App means accepting them.
 ## What you get
 
 A licence to install and use the App on your Atlassian sites, for as long as
-it is installed. The App is provided as it is; we do not promise it will be
-free of defects or available without interruption.
+it is installed and any fee that applies to your team's size is paid. The App
+is provided as it is; we do not promise it will be free of defects or
+available without interruption.
+
+## Payment
+
+The App is licensed through the Atlassian Marketplace. **Teams of ten users or
+fewer pay nothing.** Above ten users a monthly per-user fee applies, at the
+price shown on the Marketplace listing, which is the authoritative figure.
+
+**Atlassian takes the payment, not us.** Billing, invoices, taxes, renewals,
+trials and refunds are handled by Atlassian under the agreement you accepted
+when you installed the App, and the user count a fee is based on is the one
+Atlassian reports. We never see or hold your payment details.
+
+The price may change, and a change applies from your next billing period; the
+listing always shows the current price. If a fee goes unpaid, Atlassian may end
+the licence, and the App then stops working on that site.
+
+This fee is for the App itself. What your own AI provider charges you is
+separate, and also yours — see "Your AI provider" below.
 
 ## What the App is, and what it is not
 
